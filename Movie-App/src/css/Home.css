@@ -1,0 +1,47 @@
+*{
+    color: white;
+    background-color: #333;
+}
+.home {
+    background-color: #333;
+    height: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.search-form{
+    padding-bottom: 40px;
+}
+.search-button {
+    margin: 5px;
+    height: 35px;
+    width: 60px;
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.search-input {
+    height: 31px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.movi-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 20vw;
+    height: 25vw;
+}

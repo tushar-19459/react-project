@@ -1,0 +1,37 @@
+.movie-post {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.movie-post img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.favorate-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.favorate-btn .material-symbols-outlined {
+  font-size: 2rem;
+  color: red;
+  border-radius: 30px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+img{
+  height: 350px;
+  width: auto;
+}
+.card{
+  height: 450px;
+}
+
+
