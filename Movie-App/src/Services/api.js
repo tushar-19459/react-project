@@ -10,11 +10,10 @@ const options = {
 
 export const getPopularMovies = async () => {
     try {
-        let data = []; // Start with an empty flat array
+        const movieMap = new Map(); // key: movie.id, value: movie object
         let pgno = 1;
 
-
-        while (pgno <= 100) {
+        while (pgno <= 10) {
             const url1 = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${pgno}`;
             const response = await fetch(url1, options);
             const json = await response.json();
@@ -22,20 +21,55 @@ export const getPopularMovies = async () => {
             pgno++;
 
             if (json.results) {
-                data.push(...json.results); // Push each movie, not the whole results array
+                json.results.forEach(movie => {
+                    if (!movieMap.has(movie.id)) {
+                        movieMap.set(movie.id, movie); // Only add if not already present
+                    }
+                });
             }
         }
 
-        data.forEach(movie => {
-            console.log(movie.original_title);
-        });
+        const uniqueMovies = Array.from(movieMap.values()); // Convert map to array
+        console.log("Unique movies:", uniqueMovies.length);
 
-        return data; // A flat array of all movies
+        return uniqueMovies;
     } catch (err) {
         console.error("Error fetching popular movies:", err);
         return [];
     }
 };
+
+
+
+
+// export const getPopularMovies = async () => {
+//     try {
+//         let data = []; // Start with an empty flat array
+//         let pgno = 1;
+
+
+//         while (pgno <= 100) {
+//             const url1 = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${pgno}`;
+//             const response = await fetch(url1, options);
+//             const json = await response.json();
+//             console.log(`Fetched page: ${pgno}`);
+//             pgno++;
+
+//             if (json.results) {
+//                 data.push(...json.results); // Push each movie, not the whole results array
+//             }
+//         }
+
+//         // data.forEach(movie => {
+//         //     console.log(movie.original_title);
+//         // });
+
+//         return data; // A flat array of all movies
+//     } catch (err) {
+//         console.error("Error fetching popular movies:", err);
+//         return [];
+//     }
+// };
 
 
 // export const getPopularMovies = async () => {
