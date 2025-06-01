@@ -1,0 +1,81 @@
+* {
+    background-color: gray;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: "Exile", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal-width columns */
+    gap: 1rem;
+    /* space between items */
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    display: flex;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px ;
+    overflow: hidden;
+    /* border: 3px solid red; */
+    height: 31rem;
+    width: 24rem;
+    background-color: white;
+}
+
+.produc-img:hover{
+    height: 100%;
+    width: 100%;
+}
+
+.produc-img {
+    transition: all 1s ease-in-out;
+    background-color: white;
+    height: 98%;
+    width: 98%;
+}
+
+.title {
+    background-color: white;
+    color: black;
+}
+
+.shoping{
+    font-size: 60px;
+}
+.price{
+    color: black;
+    background-color: transparent;
+}
+
+.loadmore-button{
+    border-radius: 2px;
+    border: 1px solid #000;
+    height: 2rem;
+    width: 5rem;
+    transition: all 0.3s ease-out;
+}
+
+.loadmore-button:hover{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.remove{
+    display: none;
+}
