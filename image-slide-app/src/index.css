@@ -1,4 +1,4 @@
-.main {
+/* .main {
     position: relative;
     display: flex;
     justify-content: center;
@@ -75,4 +75,76 @@
     border-radius: 40px;
     border: none;
     transition: all 0.3s ease-out;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 60vh;
+    margin: 100px auto;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-button{
+    height: 13px;
+    width: 13px;
+    border-radius: 10px;
+    margin: 5px ;
+    border: none;
+    margin: none;
+    background-color: white;
+    transition: all 0.2 ease-out;
+}
+
+.active{
+    background-color: gray;
+}
+
+.current-image {
+    height: 100%;
+    width: 100%;
+}
+
+.image-div {
+    height: 100%;
+    width: 100%;
+
+}
+
+.arrow {
+     position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+.arrow:hover{
+    color: gray;
+}
+
+.left-button {
+    left: 0.5rem;
+}
+
+.right-button {
+    right: 0.5rem;
+}
+
+.indicator {
+    position: absolute;
+    align-self: flex-end;
+}
+.hide{
+    display: none;
 }
