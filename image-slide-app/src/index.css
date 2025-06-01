@@ -1,0 +1,78 @@
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-div {
+    height: 100%;
+    width: 100%;
+}
+
+.current-image {
+    height: 100%;
+    width: 100%;
+
+}
+
+.arrow {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.arrow:hover {
+    color: gray;
+}
+
+.rightButton {
+    right: 0.5rem;
+}
+
+.leftButton {
+    left: 0.5rem;
+}
+
+.circle-indicator {
+    color: white;
+    display: flex;
+    align-self: flex-end;
+    position: absolute;
+}
+
+.indicator-buttons {
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    border-radius: 40px;
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+.indicator-buttons:hover {
+    background-color: gray;
+}
+
+.hide-current-image {
+    display: none;
+}
+
+.active {
+    background-color: gray;
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    border-radius: 40px;
+    border: none;
+    transition: all 0.3s ease-out;
+}
