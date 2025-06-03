@@ -1,0 +1,19 @@
+.tab-names {
+    border: 2px solid red;
+    margin: 3px;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.all-content {
+    display: flex;
+    justify-content: center;
+}
