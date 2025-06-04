@@ -5,11 +5,13 @@ export default function name() {
     const [player, setPlayer] = useState('X')
     const [winner, setWinner] = useState('')
     const [squire, setSquire] = useState(Array(9).fill(''))
+    const [draw, setDraw] = useState(false)
 
     function handlereset() {
         setSquire(Array(9).fill(''))
         setPlayer('X')
         setWinner('')
+        setDraw(false)
     }
 
     function getWinner(temp) {
@@ -33,6 +35,7 @@ export default function name() {
     }
 
     function handleclick(value) {
+        setDraw(!squire.join().includes(',,'))
         if (squire[value] === '') {
             const temp = [...squire]
             temp[value] = player
@@ -63,6 +66,7 @@ export default function name() {
                 <Squire value={7}></Squire>
                 <Squire value={8}></Squire>
             </div>{winner && <h1>winner : {winner}</h1>}
+            {draw && <h1>Draw {winner}</h1>}
             <button onClick={handlereset}>Reset</button>
         </div>
     )
