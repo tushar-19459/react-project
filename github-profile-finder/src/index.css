@@ -1,0 +1,16 @@
+.card {
+    border: 2px solid red;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+}
+.profile-img{
+    height: 50px;
+    border-radius: 50px;
+}
+.info{
+}
