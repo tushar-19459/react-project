@@ -5,6 +5,8 @@ import PopUp from './components/PopUp'
 import GetPopUp from "./components/GetPopUp"
 import { DataProvider } from "./components/DataAcco"
 import Accordion from "./components/Accordion"
+import UserRef from "./components/UseRef"
+import Outside from "./components/Outside"
 function App() {
 
   return (
@@ -15,10 +17,11 @@ function App() {
         <PopUp></PopUp>
       </PopupProvider> */}
 
-      <DataProvider>
+      {/* <DataProvider>
         <Accordion></Accordion>
-      </DataProvider>
-
+      </DataProvider> */}
+    {/* <UserRef/> */}
+    <Outside></Outside>
     </>
   )
 }
